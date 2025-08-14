@@ -1,31 +1,31 @@
 // R3 Project Images
-import R3_preview from "/src/assets/projects/R3/R3_preview.png"
-import R3_preview1 from "/src/assets/projects/R3/R3_preview(1).png"
-import R3_preview2 from "/src/assets/projects/R3/R3_preview(2).png"
+import R3_preview from "../assets/projects/R3/R3_preview.png"
+import R3_preview1 from "../assets/projects/R3/R3_preview(1).png"
+import R3_preview2 from "../assets/projects/R3/R3_preview(2).png"
 
 // R8 Project Images
-import R8_preview from "/src/assets/projects/R8/R8_preview.png"
-import R8_preview1 from "/src/assets/projects/R8/R8_preview(1).png"
-import R8_preview2 from "/src/assets/projects/R8/R8_preview(2).png"
-import R8_preview3 from "/src/assets/projects/R8/R8_preview(3).png"
-import R8_preview4 from "/src/assets/projects/R8/R8_preview(4).png"
+import R8_preview from "../assets/projects/R8/R8_preview.png"
+import R8_preview1 from "../assets/projects/R8/R8_preview(1).png"
+import R8_preview2 from "../assets/projects/R8/R8_preview(2).png"
+import R8_preview3 from "../assets/projects/R8/R8_preview(3).png"
+import R8_preview4 from "../assets/projects/R8/R8_preview(4).png"
 
 // n8n Project Images
-import n8n_preview from "/src/assets/projects/n8n/n8n_preview.png"
-import n8n_preview1 from "/src/assets/projects/n8n/n8n_preview(1).png?url"
-import n8n_preview2 from "/src/assets/projects/n8n/n8n_preview(2).png?url"
+import n8n_preview from "../assets/projects/n8n/n8n_preview.png"
+import n8n_preview1 from "../assets/projects/n8n/n8n_preview(1).png?url"
+import n8n_preview2 from "../assets/projects/n8n/n8n_preview(2).png?url"
 
 // Scada Tasklist Images
-import tasklist_preview from "/src/assets/projects/Scada Tasklist/tasklist_preview.png"
-import tasklist_preview1 from "/src/assets/projects/Scada Tasklist/tasklist_preview(1).png"
+import tasklist_preview from "../assets/projects/Scada Tasklist/tasklist_preview.png"
+import tasklist_preview1 from "../assets/projects/Scada Tasklist/tasklist_preview(1).png"
 
 // Swagger Images
-import swagger_preview from "/src/assets/projects/swagger/swagger_preview.png"
+import swagger_preview from "../assets/projects/swagger/swagger_preview.png"
 
 // SCADA Admin Images
-import admin_image from "/src/assets/projects/SCADA_admin/admin.png"
+import admin_image from "../assets/projects/SCADA_admin/admin.png"
 
-import imagePlaceholder from "/home/dwsn/projects/rdm-port/src/assets/imagePlaceholder.png"
+import imagePlaceholder from "../assets/imagePlaceholder.png"
 
 export const projects = [
   {
