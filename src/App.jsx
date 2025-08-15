@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom"
-import { Hero, GalaxyModel, TopNavbar } from "./components"
+import { Hero, GalaxyModel, TopNavbar, AnimatedSection } from "./components"
 import SpacemanModel from "./components/SpacemanModel"
 import { About } from "./pages/About"
 import { Experience } from "./pages/Experience"
@@ -71,40 +71,48 @@ const App = () => {
           <Hero scrollY={scrollY} />
         </div>
 
-        <div
+        <AnimatedSection
           id="about"
           className="relative z-30 bg-primary/80 backdrop-blur-sm"
           style={{
             isolation: "isolate",
             pointerEvents: "auto",
           }}
+          animationType="fadeUp"
+          delay={0.2}
         >
           <About />
-        </div>
+        </AnimatedSection>
 
-        <div
+        <AnimatedSection
           id="experience"
           className="relative z-30 bg-primary/80 backdrop-blur-sm"
           style={{ isolation: "isolate", pointerEvents: "auto" }}
+          animationType="slideLeft"
+          delay={0.1}
         >
           <Experience />
-        </div>
+        </AnimatedSection>
 
-        <div
+        <AnimatedSection
           id="projects"
           className="relative z-30 bg-primary/80 backdrop-blur-sm"
           style={{ isolation: "isolate", pointerEvents: "auto" }}
+          animationType="slideRight"
+          delay={0.1}
         >
           <Projects />
-        </div>
+        </AnimatedSection>
 
-        <div
+        <AnimatedSection
           id="contact"
           className="relative z-30 bg-primary/80 backdrop-blur-sm"
           style={{ isolation: "isolate", pointerEvents: "auto" }}
+          animationType="fadeUp"
+          delay={0.1}
         >
           <Contact />
-        </div>
+        </AnimatedSection>
       </div>
     </BrowserRouter>
   )
