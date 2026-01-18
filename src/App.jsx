@@ -6,6 +6,7 @@ import { Experience } from "./pages/Experience"
 import { useState, useEffect } from "react"
 import { Contact } from "./pages/Contact"
 import { Projects } from "./pages/Projects"
+import { ModalProvider } from "./context/ModalContext"
 
 const App = () => {
   const [scrollY, setScrollY] = useState(0)
@@ -45,9 +46,10 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        {/* Top Navbar - Only appears when about section is at 100vh */}
-        <TopNavbar />
+      <ModalProvider>
+        <div className="relative z-0 bg-primary">
+          {/* Top Navbar - Only appears when about section is at 100vh */}
+          <TopNavbar />
 
         {/* Spaceman overlay */}
         <SpacemanModel scrollY={scrollY} />
@@ -113,7 +115,8 @@ const App = () => {
         >
           <Contact />
         </AnimatedSection>
-      </div>
+        </div>
+      </ModalProvider>
     </BrowserRouter>
   )
 }

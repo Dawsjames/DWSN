@@ -112,7 +112,7 @@ function TechLogosPortal({ anchorRef, items, zIndex = 1200 }) {
         ))}
       </div>
     </div>,
-    document.body
+    document.body,
   )
 }
 
@@ -167,7 +167,6 @@ const TECH_LOGOS = [
     glow: "rgba(49,120,198,0.55)",
     size: 52,
   },
-  // --- Added ---
   {
     name: "Vue.js",
     src: "https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg",
@@ -189,14 +188,44 @@ const TECH_LOGOS = [
     size: 108,
   },
   {
-    name: "Zapier",
-    src: "https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg",
-    x: "40%",
-    y: "10%",
-    delay: "2.8s",
-    ring: "#FF4F00",
-    glow: "rgba(255,79,0,0.5)",
-    size: 36,
+    name: "Docker",
+    src: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg",
+    x: "85%",
+    y: "25%",
+    delay: "3.6s",
+    ring: "#2496ED",
+    glow: "rgba(36,150,237,0.5)",
+    size: 56,
+  },
+  {
+    name: "Git",
+    src: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
+    x: "25%",
+    y: "45%",
+    delay: "4.0s",
+    ring: "#F05032",
+    glow: "rgba(240,80,50,0.5)",
+    size: 52,
+  },
+  {
+    name: "PostgreSQL",
+    src: "https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg",
+    x: "50%",
+    y: "85%",
+    delay: "4.8s",
+    ring: "#336791",
+    glow: "rgba(51,103,145,0.5)",
+    size: 54,
+  },
+  {
+    name: "Supabase",
+    src: "https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg",
+    x: "85%",
+    y: "80%",
+    delay: "5.6s",
+    ring: "#3ECF8E",
+    glow: "rgba(62,207,142,0.5)",
+    size: 58,
   },
 ]
 

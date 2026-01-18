@@ -19,6 +19,9 @@ import n8n_preview2 from "../assets/projects/n8n/n8n_preview(2).png?url"
 import tasklist_preview from "../assets/projects/Scada Tasklist/tasklist_preview.png"
 import tasklist_preview1 from "../assets/projects/Scada Tasklist/tasklist_preview(1).png"
 
+import KC_workflow from "../assets/projects/KC_Workflow/KC_workflow.png"
+import KC_workflow1 from "../assets/projects/KC_Workflow/KC_workflow1.png"
+
 // Swagger Images
 import swagger_preview from "../assets/projects/swagger/swagger_preview.png"
 
@@ -28,6 +31,28 @@ import admin_image from "../assets/projects/SCADA_admin/admin.png"
 import imagePlaceholder from "../assets/imagePlaceholder.png"
 
 export const projects = [
+  {
+    name: "King Caller Workflow Module",
+    description:
+      "A comprehensive automation workflow module designed for the King Caller SaaS platform to streamline and automate agent call operations. Features intelligent call routing, automated task management, real-time monitoring, and integration with external systems for efficient call center operations.",
+    tags: ["React", "Tailwind", "Express", "Postgresql", "Redux", "Supabase"],
+    thumbnail: KC_workflow,
+    images: [KC_workflow, KC_workflow1],
+    source_code_link: null,
+    live_demo_link: null,
+    isPrivate: true,
+  },
+  {
+    name: "DICT Region III Landing Page",
+    description:
+      "Official DICT portal for Region 3’s Disaster Risk Reduction and Management, providing tools and resources for emergency response, community preparedness, communication, and resilience.",
+    tags: ["Vue", "Quasar", "PostgreSQL", "PHP", "PHPMaker", "Axios"],
+    thumbnail: R3_preview,
+    images: [R3_preview, R3_preview1, R3_preview2],
+    source_code_link: null,
+    live_demo_link: null,
+    isPrivate: true,
+  },
   {
     name: "DICT Region III Landing Page",
     description:

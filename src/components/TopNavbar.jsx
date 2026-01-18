@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useMemo } from "react"
+import { useModal } from "../context/ModalContext"
 
 const TopNavbar = () => {
   const [activeSection, setActiveSection] = useState("hero")
   const [showNavbar, setShowNavbar] = useState(false)
   const [hasAnimated, setHasAnimated] = useState(false)
+  const { isModalOpen } = useModal()
 
   const navItems = useMemo(
     () => [
@@ -192,15 +194,15 @@ const TopNavbar = () => {
     boxShadow: "6px 6px 0 #ff8c42, 0 0 40px rgba(255, 140, 66, 0.4)",
     fontFamily: '"Roboto Mono", "Courier New", monospace',
     padding: "12px 20px",
-    opacity: showNavbar ? 1 : 0,
-    pointerEvents: showNavbar ? "auto" : "none",
-    transform: showNavbar
+    opacity: showNavbar && !isModalOpen ? 1 : 0,
+    pointerEvents: showNavbar && !isModalOpen ? "auto" : "none",
+    transform: showNavbar && !isModalOpen
       ? "translateX(-50%) translateY(0) scale(1)"
       : "translateX(-50%) translateY(-40px) scale(0.95)",
     transition:
       "opacity 0.5s cubic-bezier(0.68,-0.55,0.265,1.55), transform 0.7s cubic-bezier(0.68,-0.55,0.265,1.55)",
     animation:
-      hasAnimated || !showNavbar
+      (hasAnimated || !showNavbar || isModalOpen)
         ? "none"
         : "topNavSlideIn 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards",
   }

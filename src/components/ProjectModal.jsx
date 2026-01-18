@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { PixelButton } from "./PixelatedComponents"
 import { TechStackList } from "./TechStackBadge"
+import { useModal } from "../context/ModalContext"
 
 export const ProjectModal = ({ project, isOpen, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isImageLoading, setIsImageLoading] = useState(false)
+  const { closeModal } = useModal()
 
   // Reset image index when project changes
   useEffect(() => {
@@ -28,7 +30,7 @@ export const ProjectModal = ({ project, isOpen, onClose }) => {
 
     window.addEventListener("keydown", handleKeyPress)
     return () => window.removeEventListener("keydown", handleKeyPress)
-  }, [isOpen, currentImageIndex, project])
+  }, [isOpen, currentImageIndex, project, onClose])
 
   if (!project || !isOpen) return null
 
@@ -107,7 +109,7 @@ export const ProjectModal = ({ project, isOpen, onClose }) => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            zIndex: 1000,
+            zIndex: 10000,
             padding: "20px",
           }}
           onClick={onClose}
@@ -212,7 +214,7 @@ export const ProjectModal = ({ project, isOpen, onClose }) => {
             <div
               style={{
                 position: "relative",
-                height: "450px", // Optimized for wide SCADA interface displays
+                height: "450px",
                 overflow: "hidden",
                 backgroundColor: "#1a1a1a",
               }}
@@ -230,7 +232,7 @@ export const ProjectModal = ({ project, isOpen, onClose }) => {
                   style={{
                     width: "100%",
                     height: "100%",
-                    objectFit: "contain", // Changed from cover to contain for better fit
+                    objectFit: "contain",
                     transition: "opacity 0.3s ease",
                     opacity: isImageLoading ? 0.5 : 1,
                   }}
@@ -400,11 +402,11 @@ export const ProjectModal = ({ project, isOpen, onClose }) => {
             <div
               style={{
                 padding: "24px",
-                maxHeight: "calc(90vh - 550px)", // Adjusted for taller image container
+                maxHeight: "calc(90vh - 550px)",
                 overflowY: "auto",
               }}
             >
-              {/* Description */}
+              {/* Description - Truncated to 2 lines */}
               <p
                 style={{
                   color: "#fee1c7",
@@ -413,6 +415,11 @@ export const ProjectModal = ({ project, isOpen, onClose }) => {
                   marginBottom: "24px",
                   fontFamily: '"Roboto Mono", "Courier New", monospace',
                   opacity: 0.9,
+                  display: "-webkit-box",
+                  WebkitLineClamp: "2",
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                 }}
               >
                 {project.description}

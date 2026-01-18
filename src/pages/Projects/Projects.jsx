@@ -3,13 +3,14 @@ import { PixelSectionTitle } from "../../components/PixelatedComponents"
 import { ProjectModal } from "../../components/ProjectModal"
 import { TechStackList } from "../../components/TechStackBadge"
 import { projects } from "../../data/projects"
+import { useModal } from "../../context/ModalContext"
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [hoveredIndex, setHoveredIndex] = useState(null)
-  const [showModal, setShowModal] = useState(false)
   const [modalProject, setModalProject] = useState(null)
   const [floatingEnabled, setFloatingEnabled] = useState(true)
+  const { openModal, closeModal } = useModal()
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length)
@@ -25,14 +26,14 @@ const Projects = () => {
     setCurrentIndex(index)
   }
 
-  const openModal = (project) => {
+  const handleOpenModal = (project) => {
     setModalProject(project)
-    setShowModal(true)
+    openModal()
   }
 
-  const closeModal = () => {
-    setShowModal(false)
+  const handleCloseModal = () => {
     setModalProject(null)
+    closeModal()
   }
 
   return (
@@ -225,7 +226,7 @@ const Projects = () => {
                   onClick={() => {
                     if (isActive) {
                       // If clicking the active card, open modal
-                      openModal(project)
+                      handleOpenModal(project)
                     } else {
                       // If clicking non-active card, navigate to it
                       goToIndex(index)
@@ -240,7 +241,7 @@ const Projects = () => {
                     isSelected={isActive}
                     isHovered={index === hoveredIndex}
                     position={position}
-                    onModalOpen={openModal}
+                    onModalOpen={handleOpenModal}
                     floatingEnabled={floatingEnabled}
                   />
                 </div>
@@ -450,8 +451,8 @@ const Projects = () => {
       {/* Enhanced Project Modal */}
       <ProjectModal
         project={modalProject}
-        isOpen={showModal}
-        onClose={closeModal}
+        isOpen={modalProject !== null}
+        onClose={handleCloseModal}
       />
 
       <style>{`

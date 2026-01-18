@@ -1,10 +1,41 @@
 import { blue, green, orange, purple } from "../utils/colors"
 import ITBS from "../assets/company_logos/ITBS.png"
 import SSS from "../assets/company_logos/SSS.png"
+import KingCaller from "../assets/company_logos/KingCaller.jpg"
 
 export const experiences = [
   {
     id: 0,
+    name: "KingCaller",
+    title: "Full Stack Developer",
+    joined: "Sept 2025",
+    end: "Present",
+    bio: "Developing KingCaller Workflow Module. Full stack developer with React, Express, Redux, Tailwind, PostgreSQL, Supabase, Docker. Responsible for managing the workflow automation backend engine, and developing the frontend user interface.",
+    logo: KingCaller,
+    technologies: [
+      "React",
+      "Tailwind",
+      "Express",
+      "Postgresql",
+      "Redux",
+      "Supabase",
+    ],
+    color: blue,
+    colorScheme: {
+      background: "#1B2554",
+      border: "#2E7FA3",
+      text: "#E6E6E6",
+      accent: "#1D4179",
+      glow: "#2E7FA340",
+      titleText: "#E6E6E6",
+      subtitleText: "#2E7FA3",
+      descriptionText: "#E6E6E6",
+      dateText: "#E6E6E6",
+      techText: "#FF8C42",
+    },
+  },
+  {
+    id: 1,
     name: "Information Technology Business Solutions",
     title: "Frontend Developer",
     joined: "Jan 2025",
@@ -27,7 +58,7 @@ export const experiences = [
     },
   },
   {
-    id: 1,
+    id: 2,
     name: "Social Security Systems",
     title: "Account Officer",
     joined: "Dec 2023",
