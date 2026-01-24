@@ -49,17 +49,6 @@ export const projects = [
     tags: ["Vue", "Quasar", "PostgreSQL", "PHP", "PHPMaker", "Axios"],
     thumbnail: R3_preview,
     images: [R3_preview, R3_preview1, R3_preview2],
-    source_code_link: null,
-    live_demo_link: null,
-    isPrivate: true,
-  },
-  {
-    name: "DICT Region III Landing Page",
-    description:
-      "Official DICT portal for Region 3’s Disaster Risk Reduction and Management, providing tools and resources for emergency response, community preparedness, communication, and resilience.",
-    tags: ["Vue", "Quasar", "PostgreSQL", "PHP", "PHPMaker", "Axios"],
-    thumbnail: R3_preview,
-    images: [R3_preview, R3_preview1, R3_preview2],
     source_code_link: "",
     live_demo_link: "https://dictr3safe.ph/#/",
     isPrivate: true,
